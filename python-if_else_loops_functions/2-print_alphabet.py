@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-strr = ''
+strm = ''
 for i in range(97, 123):
-    strr += chr(i)
+    strm += chr(i)
 
-print("{0}".format(strr))
+print("{0}".format(strm))
