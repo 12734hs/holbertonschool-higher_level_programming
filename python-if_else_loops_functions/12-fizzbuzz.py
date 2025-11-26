@@ -5,10 +5,14 @@ def fizzbuzz():
         if i % 15 == 0:
             strr += "FizzBuzz "
         elif i % 5 == 0:
-            strr += "Buzz "
+            if i != 100:
+                strr += "Buzz "
+            else:
+                strr += "Buzz"
         elif i % 3 == 0:
             strr += "Fizz "
         else:
             strr += "{} ".format(i)
-    
     print(strr)
+~
+~                 
