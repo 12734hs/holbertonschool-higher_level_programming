@@ -14,3 +14,4 @@ def fizzbuzz():
         else:
             strr += "{} ".format(i)
     print(strr, end = "")
+    print()
