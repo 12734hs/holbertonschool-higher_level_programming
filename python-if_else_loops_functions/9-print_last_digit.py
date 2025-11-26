@@ -6,3 +6,4 @@ def print_last_digit(number):
         return result
     else:
         print("0")
+        return number
