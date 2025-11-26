@@ -5,5 +5,5 @@ def print_last_digit(number):
         print("{}".format(result), end='')
         return result
     else:
-        print("0")
+        print("0", end="")
         return number
