@@ -1,4 +1,7 @@
 #!/usr/bin/python3
 def print_last_digit(number):
-    result = int(str(number)[-1])
-    print("{}".format(result), end='')
+    if number!= 0:
+        result = int(str(number)[-1])
+        print("{}".format(result), end='')
+    else:
+        print("0")
