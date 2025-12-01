@@ -4,10 +4,10 @@ import sys
 lst = sys.argv
 lst.pop(0)
 
-accumulator = 0
+acumulator = 0
 
 for i in lst:
-    accumulator += int(i)
+    acumulator += int(i)
 
 if __name__ == "__main__":
-    print(accumulator)
+    print(acumulator)
