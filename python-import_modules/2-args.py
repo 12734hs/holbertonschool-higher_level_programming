@@ -4,6 +4,7 @@ import sys
 lst = sys.argv
 lst.pop(0)
 
+
 def func():
     if len(lst) != 0:
         if len(lst) != 1:
@@ -15,6 +16,7 @@ def func():
             print("{}: {}".format(len(lst), lst[0]))
     else:
         print("0 arguments.")
+
 
 if __name__ == "__main__":
     func()
