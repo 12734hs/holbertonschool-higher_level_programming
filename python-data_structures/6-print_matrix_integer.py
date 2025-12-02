@@ -3,5 +3,8 @@
 def print_matrix_integer(matrix=[[]]):
     for lists in matrix:
         for i in lists:
-            print('{:d}'.format(i), end=' ')
+            if lists.index(i) != lists.index(lists[-1]):
+                print('{:d}'.format(i), end=' ')
+            else:
+                print('{:d}'.format(i), end='')
         print('')
