@@ -2,4 +2,4 @@
 
 def print_last_integer(my_list=[]):
     for i in my_list:
-        print("{}".format(i))
+        print("{:d}".format(i))
