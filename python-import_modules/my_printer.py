@@ -1,0 +1,2 @@
+def prnt():
+    print("#pythoniscool")
