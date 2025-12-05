@@ -15,7 +15,7 @@ def print_result():
         if operator == '+':
             result = add(a, b)
             print('{} {} {} = {}'.format(a, operator, b, result))
-        
+
         elif operator == '-':
             result = sub(a, b)
             print('{} {} {} = {}'.format(a, operator, b, result))
@@ -34,6 +34,7 @@ def print_result():
     else:
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
         exit(1)
+
 
 if __name__ == "__main__":
     print_result()
