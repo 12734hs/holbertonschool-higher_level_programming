@@ -11,26 +11,23 @@ def print_result():
         a = int(list_of_arguments[0])
         b = int(list_of_arguments[2])
         operator = list_of_arguments[1]
-    
+
         if operator == '+':
             result = add(a, b)
             print('{} {} {} = {}'.format(a, operator, b, result))
-            #print(0)
         
         elif operator == '-':
             result = sub(a, b)
             print('{} {} {} = {}'.format(a, operator, b, result))
-            #print(0)
 
         elif operator == '*':
             result = mul(a, b)
             print('{} {} {} = {}'.format(a, operator, b, result))
-            #print(0)
 
         elif operator == '/':
             result = div(a, b)
             print('{} {} {} = {}'.format(a, operator, b, result))
-            #print(0)
+
         else:
             print('Unknown operator. Available operators: +, -, * and /')
             exit(1)
