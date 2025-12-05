@@ -5,6 +5,7 @@ list_of_arguments = argv
 list_of_arguments.pop(0)
 list_of_operators = ['+', '-', '*', '/']
 
+
 def print_result():
     if len(list_of_arguments) == 3:
         a = int(list_of_arguments[0])
@@ -14,28 +15,28 @@ def print_result():
         if operator == '+':
             result = add(a, b)
             print('{} {} {} = {}'.format(a, operator, b, result))
-            print(0)
+            #print(0)
         
         elif operator == '-':
             result = sub(a, b)
             print('{} {} {} = {}'.format(a, operator, b, result))
-            print(0)
+            #print(0)
 
         elif operator == '*':
             result = mul(a, b)
             print('{} {} {} = {}'.format(a, operator, b, result))
-            print(0)
+            #print(0)
 
         elif operator == '/':
             result = div(a, b)
             print('{} {} {} = {}'.format(a, operator, b, result))
-            print(0)
+            #print(0)
         else:
             print('Unknown operator. Available operators: +, -, * and /')
-            print(1)
+            #print(1)
     else:
         print('Usage: ./100-my_calculator.py <a> <operator> <b>')
-        print(1)
+        #print(1)
 
 if __name__ == "__main__":
     print_result()
