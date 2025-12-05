@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-import sys
+from sys import argv
 from calculator_1 import add, sub, mul, div
-list_of_arguments = sys.argv
+list_of_arguments = argv
 list_of_arguments.pop(0)
 list_of_operators = ['+', '-', '*', '/']
 
