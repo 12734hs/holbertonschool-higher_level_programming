@@ -9,4 +9,6 @@ def best_score(a_dictionary):
                 key = i
             else:
                 pass
-    print(key)
+        return key
+    else:
+        return None
