@@ -10,4 +10,4 @@ def roman_to_int(roman_string):
                 accumulator += roman_letter[roman_string[index]] - 2 * roman_letter[roman_string[index-1]]
             else:
                 accumulator += roman_letter[roman]
-    print(accumulator)
+    return accumulator
