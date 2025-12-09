@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 def uniq_add(my_list=[]):
-    final_list = tuple(my_list)
+    final_list = set(my_list)
     return sum(final_list)
