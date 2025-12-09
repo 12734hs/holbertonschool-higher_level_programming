@@ -3,5 +3,5 @@ def simple_delete(a_dictionary, key=""):
     if key not in list(a_dictionary.keys()):
         pass
     else:
-        l = a_dictionary.pop(key)
+        a_dictionary.pop(key)
     return a_dictionary
