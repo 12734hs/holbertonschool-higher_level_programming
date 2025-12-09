@@ -1,4 +1,7 @@
 #!/usr/bin/python3
 def simple_delete(a_dictionary, key=""):
-    l = a_dictionary.pop(key)
+    if key not in list(a_dictionary.keys()):
+        pass
+    else:
+        l = a_dictionary.pop(key)
     return a_dictionary
