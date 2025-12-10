@@ -3,6 +3,6 @@ def safe_print_division(a, b):
     try:
         result = a + b
     except:
-        print(None)
+        print("{}".format(None))
     finally:
-        print(result)
+        print("{}".format(result))
