@@ -6,16 +6,5 @@ def safe_print_list_integers(my_list=[], x=0):
             print("{:d}".format(my_list[i]), end="")
         print()
         return x
-    except IndexError:
-        x = 0
-        for item in my_list:
-            x += 1
-        for i in range(0, x):
-            try:
-                print("{:d}".format(my_list[i]), end="")
-            except ValueError:
-                pass
-        print()
-        return x
     except ValueError:
-        a = 2
+        pass
