@@ -8,7 +8,7 @@ def safe_print_list_integers(my_list=[], x=0):
             final_sentence += "{}".format(my_list[i])
         except (ValueError, TypeError):
             pass
-    for i in list_of_numbers:
+    for i in my_list:
         accumulator += 1
     print(final_sentence)
     return accumulator
