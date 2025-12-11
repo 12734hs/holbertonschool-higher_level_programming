@@ -14,7 +14,7 @@ def safe_print_list_integers(my_list=[], x=0):
         accumulator_of_list += 1
 
     for i in final_sentence:
-        accumulator_of_sentence
+        accumulator_of_sentence += 1
 
     if accumulator_of_list > accumulator_of_sentence:
         print(final_sentence)
