@@ -4,15 +4,11 @@
 
 class Square:
     """This class was created for make square guy"""
-    def __init__(self, size=None):
-        if size == None:
-            pass
-        else:
-            check = isinstance(size, int)
-            check2 = size > 0
-            if check == True and check2 == True:
+    def __init__(self, size=0):
+        if isinstance(size, int):
+            if size > 0:
                 self.__size = size
-            elif check != True and check2 == True:
-                raise TypeError("size must be an integer")
-            elif check == True and check2 != True:
+            else:
                 raise ValueError ("size must be >= 0")
+        else:
+            raise TypeError ("size must be an integer")
