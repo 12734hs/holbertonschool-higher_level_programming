@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """This class was created for make square guy"""
-from itertools import accumulate
 
 
 class Square:
