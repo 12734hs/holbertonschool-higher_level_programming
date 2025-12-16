@@ -24,7 +24,7 @@ class Square:
                 raise TypeError(text)
         else:
             raise TypeError(text)
-    
+ 
     text = "position must be a tuple of 2 positive integers"
 
     @property
