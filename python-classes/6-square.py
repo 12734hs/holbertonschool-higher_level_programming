@@ -3,7 +3,6 @@
 
 
 class Square:
-    text = "position must be a tuple of 2 positive integers"
     """It is a class, as you can see it"""
 
     def __init__(self, size=0, position=(0, 0)):
