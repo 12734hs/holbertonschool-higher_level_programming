@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""This class was created for make square guy"""
+"""Hello guys, how is weather today"""
 
 
 class Square:
-    """This class was created for make square guy"""
+    """It is a class, as you can see it"""
+
     def __init__(self, size=0, position=(0,0)):
         if isinstance(size, int):
             if size >= 0:
@@ -13,13 +14,27 @@ class Square:
         else:
             raise TypeError("size must be an integer")
 
-        if len(position) == 2 and position[0] >= 0 and position[1] >= 0:
-            self.__position = position
+        if len(position) == 2:
+            if position[0] >= 0 and position[1] >= 0:
+                self.__position = position
+            else:
+                raise TypeError("position must be a tuple of 2 positive integers")
         else:
             raise TypeError("position must be a tuple of 2 positive integers")
 
-    def area(self):
-        return self.__size * self.__size
+    @property
+    def position(self):
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        if len(value) == 2:
+            if value[0] >= 0 and value[1] >= 0:
+                self.__position = value
+            else:
+                raise TypeError("position must be a tuple of 2 positive integers")
+        else:
+            raise TypeError("position must be a tuple of 2 positive integers")
 
     @property
     def size(self):
@@ -35,20 +50,13 @@ class Square:
         else:
             raise TypeError("size must be an integer")
 
-    @property
-    def position(self):
-        return self.__position
-
-    @position.setter
-    def position(self, value):
-        if len(value) == 2 and value[0] >= 0 and value[1] >= 0:
-            self.__position = value
-        else:
-            raise TypeError("position must be a tuple of 2 positive integers")
+    def area(self):
+        return self.__size * self.__size
 
     def my_print(self):
-        if self.__size != 0:
-            for i in range(1, self.__size + 1):
-                print(self.__size * "#")
-        else:
+        for i in range(1, self.__position[1] + 1):
             print()
+        for i in range(1, self.__size + 1):
+            for k in range(0, self.__position[0]):
+                print(' ', end='')
+            print(self.__size * "#")
