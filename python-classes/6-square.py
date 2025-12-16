@@ -3,9 +3,11 @@
 
 
 class Square:
+    text = "position must be a tuple of 2 positive integers"
     """It is a class, as you can see it"""
 
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
+        text = "position must be a tuple of 2 positive integers"
         if isinstance(size, int):
             if size >= 0:
                 self.__size = size
@@ -20,9 +22,11 @@ class Square:
             if isint1 and isint2 and position[0] >= 0 and position[1] >= 0:
                 self.__position = position
             else:
-                raise TypeError("position must be a tuple of 2 positive integers")
+                raise TypeError(text)
         else:
-            raise TypeError("position must be a tuple of 2 positive integers")
+            raise TypeError(text)
+    
+    text = "position must be a tuple of 2 positive integers"
 
     @property
     def position(self):
@@ -30,15 +34,17 @@ class Square:
 
     @position.setter
     def position(self, value):
+        text = "position must be a tuple of 2 positive integers"
+
         if len(value) == 2:
             isint1 = isinstance(value[0], int)
             isint2 = isinstance(value[1], int)
             if isint1 and isint2 and value[0] >= 0 and value[1] >= 0:
                 self.__position = value
             else:
-                raise TypeError("position must be a tuple of 2 positive integers")
+                raise TypeError(text)
         else:
-            raise TypeError("position must be a tuple of 2 positive integers")
+            raise TypeError(text)
 
     @property
     def size(self):
