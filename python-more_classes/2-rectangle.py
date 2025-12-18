@@ -50,7 +50,7 @@ class Rectangle:
             raise TypeError("height must be an integer")
 
     def area(self):
-        return self.__height * self.__height
+        return self.__width * self.__height
 
     def perimeter(self):
         if self.__height == 0 or self.__width == 0:
