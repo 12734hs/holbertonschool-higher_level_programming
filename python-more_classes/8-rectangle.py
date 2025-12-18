@@ -57,7 +57,7 @@ class Rectangle:
             raise TypeError("height must be an integer")
 
     def area(self):
-        return self.__height * self.__height
+        return self.__width * self.__height
 
     def perimeter(self):
         if self.__height == 0 or self.__width == 0:
@@ -65,6 +65,7 @@ class Rectangle:
         else:
             return (self.__height * 2) + (self.__width * 2)
 
+    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         if isinstance(rect_1, Rectangle):
             if isinstance(rect_2, Rectangle):
@@ -72,7 +73,7 @@ class Rectangle:
                     return rect_1
                 elif rect_1.area() < rect_2.area():
                     return rect_2
-                elif rect_1.area() == rect_2.area():
+                else:
                     return rect_1
             else:
                 raise TypeError("rect_2 must be an instance of Rectangle")
