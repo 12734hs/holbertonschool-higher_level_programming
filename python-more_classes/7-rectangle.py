@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    """I'm your father luke"""
+    """okay, I'm your father luke"""
 
     number_of_instances = 0
 
@@ -70,7 +70,7 @@ class Rectangle:
         else:
             sentence = ""
             for i in range(0, self.__height):
-                sentence += self.__width * f"{Rectangle.print_symbol}" + "\n"
+                sentence += self.__width * f"{self.print_symbol}" + "\n"
             return sentence[:-1]
 
     def __repr__(self):
