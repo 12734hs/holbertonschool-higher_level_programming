@@ -59,7 +59,10 @@ class Rectangle:
             return (self.__height * 2) + (self.__width * 2)
 
     def __str__(self):
-        sentence = ""
-        for i in range(0, self.__height):
-            sentence += self.__width * "#" + "\n"
-        return sentence[:-1]
+        if self.__width == 0 or self.__height == 0:
+            return ''
+        else:
+            sentence = ""
+            for i in range(0, self.__height):
+                sentence += self.__width * "#" + "\n"
+            return sentence[:-1]
