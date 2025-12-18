@@ -72,7 +72,7 @@ class Rectangle:
                     return rect_1
                 elif rect_1.area() < rect_2.area():
                     return rect_2
-                else:
+                elif rect_1.area() == rect_2.area():
                     return rect_1
             else:
                 raise TypeError("rect_2 must be an instance of Rectangle")
