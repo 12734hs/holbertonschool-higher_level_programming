@@ -62,4 +62,4 @@ class Rectangle:
         sentence = ""
         for i in range(0, self.__height):
             sentence += self.__width * "#" + "\n"
-        return sentence[:1]
+        return sentence[:-1]
