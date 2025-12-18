@@ -27,7 +27,6 @@ class Rectangle:
         else:
             raise TypeError("height must be an integer")
 
-
     @property
     def width(self):
         return self.__width
@@ -79,8 +78,6 @@ class Rectangle:
                 raise TypeError("rect_2 must be an instance of Rectangle")
         else:
             raise TypeError("rect_1 must be an instance of Rectangle")
-
-
 
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
