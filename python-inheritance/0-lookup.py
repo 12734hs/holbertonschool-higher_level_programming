@@ -3,4 +3,4 @@
 
 def lookup(obj):
     """This is method which we use for show all elements"""
-    return obj.__dict__
+    return dir(obj)
