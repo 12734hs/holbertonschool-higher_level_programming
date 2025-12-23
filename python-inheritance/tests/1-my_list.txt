@@ -1,5 +1,5 @@
->>>MyList = __import__('1-my_list').MyList
->>>m = MyList()
->>>isinstance(m, MyList)
+>>> MyList = __import__('1-my_list').MyList
+>>> m = MyList()
+>>> isinstance(m, MyList)
 True
->>>
+>>> 
