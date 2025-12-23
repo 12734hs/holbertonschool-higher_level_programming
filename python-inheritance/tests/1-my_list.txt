@@ -14,6 +14,12 @@ True
 >>> m.remove('1')
 >>> m.print_sorted()
 []
+>>> m.append('4')
+>>> m.append('5')
+>>> m.append('2')
+>>> m.append('3')
+>>> m.append('1')
 >>> l = m.print_sorted()
-[]
+>>> l
+['1', '2', '3', '4', '5']
 >>> 
