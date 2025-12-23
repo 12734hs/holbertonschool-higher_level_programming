@@ -16,7 +16,6 @@ class BaseGeometry:
         else:
             raise TypeError("{} must be an integer".format(name))
 
-
 class Rectangle(BaseGeometry):
     """Rectangle"""
     def __init__(self, width, height):
