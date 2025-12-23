@@ -20,6 +20,5 @@ True
 >>> m.append('3')
 >>> m.append('1')
 >>> l = m.print_sorted()
->>> l
 ['1', '2', '3', '4', '5']
 >>> 
