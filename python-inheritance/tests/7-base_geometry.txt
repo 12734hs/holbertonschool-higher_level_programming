@@ -5,8 +5,8 @@
 True
 
 >>> try:
->>> 	bg.area()
->>> except Exception as e:
->>> 	print(1)
+...     bg.area()
+... except Exception as e:
+...     print(1)
 1
->>> 
+>>>  
