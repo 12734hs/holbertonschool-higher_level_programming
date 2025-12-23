@@ -15,4 +15,9 @@ True
 ... except TypeError as e:
 ...     print(1)
 1
+>>> try:
+...     bg.area("age")
+... except Exception as e:
+...     print(1)
+1
 >>> 
