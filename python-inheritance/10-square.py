@@ -1,7 +1,3 @@
-#!/usr/bin/python3
-"""Hi"""
-
-
 class BaseGeometry:
     """Hi"""
     def area(self):
@@ -33,11 +29,9 @@ class Rectangle(BaseGeometry):
 
 class Square(Rectangle):
     """Square class"""
-    def __init__(self, width, height):
-        self.integer_validator("width", width)
-        self.integer_validator("height", height)
-        self.__width = width
-        self.__height = height
-    
+    def __init__(self):
+        super().__init__()
+
+
     def area(self):
         return self.__width * self.__height
