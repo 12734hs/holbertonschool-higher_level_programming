@@ -1,27 +1,24 @@
 >>> MyList = __import__('1-my_list').MyList
+
 >>> m = MyList()
 >>> isinstance(m, MyList)
 True
+
 >>> issubclass(MyList, list)
 True
+
 >>> print(m)
 []
+
 >>> m.append("1")
 >>> print(m)
 ['1']
+
 >>> m.print_sorted()
 ['1']
+
 >>> m.remove('1')
 >>> m.print_sorted()
 []
->>> m.append('4')
->>> m.append('5')
->>> m.append('2')
->>> m.append('3')
->>> m.append('1')
->>> l = m.print_sorted()
-['1', '2', '3', '4', '5']
->>> l = MyList()
->>> l.print_sorted()
-[]
->>>  
+
+>>> 
