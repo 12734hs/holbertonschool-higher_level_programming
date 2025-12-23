@@ -29,4 +29,9 @@ True
 ... except ValueError as e:
 ...     print(1)
 1
+>>> try:
+...     bg.integer_validator("age", "4")
+... except TypeError as e:
+...     print(1)
+1
 >>> 
