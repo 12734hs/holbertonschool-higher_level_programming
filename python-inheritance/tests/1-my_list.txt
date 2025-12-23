@@ -3,5 +3,5 @@
 >>> isinstance(m, MyList)
 True
 >>> issubclass(MyList, list)
-False
+True
 >>>  
