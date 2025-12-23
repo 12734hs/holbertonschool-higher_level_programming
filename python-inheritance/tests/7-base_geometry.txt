@@ -16,8 +16,8 @@ True
 ...     print(1)
 1
 >>> try:
-...     bg.area("age")
-... except Exception as e:
+...     bg.integer_validator("age")
+... except TypeError as e:
 ...     print(1)
 1
 >>> 
