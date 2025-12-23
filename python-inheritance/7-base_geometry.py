@@ -12,6 +12,6 @@ class BaseGeometry:
             if value > 0:
                 pass
             else:
-                raise ValueError("value must be greater than 0")
+                raise ValueError("name must be greater than 0")
         else:
-            raise TypeError("value must be an integer")
+            raise TypeError("name must be an integer")
