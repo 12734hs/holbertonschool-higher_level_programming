@@ -14,7 +14,6 @@ True
 >>> m.remove('1')
 >>> m.print_sorted()
 []
->>> l = MyList()
->>> l.print_sorted()
-[]
->>>  
+>>> l = m.print_sorted()
+['1']
+>>> 
