@@ -5,5 +5,5 @@ True
 >>> issubclass(MyList, list)
 True
 >>> print(m)
-'[]'
+[]
 >>>   
