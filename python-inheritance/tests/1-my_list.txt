@@ -11,4 +11,7 @@ True
 ['1']
 >>> m.print_sorted()
 ['1']
->>>  
+>>> m.pop()
+>>> m.print_sorted()
+[]
+>>> 
