@@ -9,4 +9,10 @@ True
 ... except Exception as e:
 ...     print(1)
 1
->>>  
+
+>>> try:
+...     bg.integer_validator()
+... except TypeError as e:
+...     print(1)
+1
+>>> 
