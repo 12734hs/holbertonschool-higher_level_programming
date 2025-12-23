@@ -15,5 +15,5 @@ True
 >>> m.print_sorted()
 []
 >>> l = m.print_sorted()
-['1']
+[]
 >>> 
