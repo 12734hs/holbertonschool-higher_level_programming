@@ -7,4 +7,6 @@ True
 >>> print(m)
 []
 >>> m.append("1")
->>> 
+>>> print(m)
+["1"]
+>>>  
