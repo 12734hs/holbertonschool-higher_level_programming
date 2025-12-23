@@ -2,4 +2,6 @@
 >>> m = MyList()
 >>> isinstance(m, MyList)
 True
->>> 
+>>> issubclass(m, list)
+False
+>>>  
