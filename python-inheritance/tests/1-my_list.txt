@@ -9,4 +9,6 @@ True
 >>> m.append("1")
 >>> print(m)
 ['1']
+>>> m.print_sorted()
+['1']
 >>>  
