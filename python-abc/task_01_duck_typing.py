@@ -1,5 +1,4 @@
 #!usr/bin/python3
-
 from abc import ABC, abstractmethod
 
 class Shape(ABC):
@@ -37,5 +36,8 @@ def shape_info(shape):
     print(shape.area())
     print(shape.perimeter())
 
-shape_info(Rectangle(5, 5))
-shape_info(Circle(5))
+rectangle = Rectangle(100, 200)
+circle = Circle(100)
+
+shape_info(rectangle)
+shape_info(circle)
