@@ -13,8 +13,8 @@ class VerboseList(list):
         print('Removed {} from the list.'.format(x))
 
     def pop(self, x=-1):
-        super().pop(x)
         print('Popped {} from the list.'.format(self[x]))
+        super().pop(x)
 
 
 lst = VerboseList()
