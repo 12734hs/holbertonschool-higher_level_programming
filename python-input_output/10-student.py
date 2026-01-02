@@ -13,5 +13,10 @@ class Student:
         if attrs is None:
             return self.__dict__
         else:
-            return {k: self.__dict__[k] for k in attrs if k in self.__dict__}
-
+            new_dict = {}
+            for i in attrs:
+                if i in self.__dict__.keys():
+                    new_dict[i] = self.__dict__[i]
+                else:
+                    pass
+            return new_dict
