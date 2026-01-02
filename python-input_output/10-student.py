@@ -11,7 +11,7 @@ class Student:
 
     def to_json(self, attrs=None):
         if attrs:
-            if len(attrs) > 0:
+            if len(attrs) >= 0:
                 new_dict = {}
                 for i in attrs:
                     if i in self.__dict__.keys():
