@@ -10,11 +10,14 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        if len(attrs) > 0 or attrs:
-            new_dict = {}
-            for i in attrs:
-                if i in self.__dict__.keys():
-                    new_dict[i] = self.__dict__[i]
+        if attrs:
+            if len(attrs) > 0:
+                new_dict = {}
+                for i in attrs:
+                    if i in self.__dict__.keys():
+                        new_dict[i] = self.__dict__[i]
+                    else:
+                        pass
                 else:
                     pass
             else:
