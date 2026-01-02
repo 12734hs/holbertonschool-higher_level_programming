@@ -2,7 +2,7 @@
 """PART:I/O"""
 
 
-def readfile(filename=''):
+def read_file(filename=''):
     """funct"""
     with open(filename, 'r') as file:
         file.read()
