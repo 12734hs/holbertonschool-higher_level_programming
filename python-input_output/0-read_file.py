@@ -6,4 +6,4 @@ def read_file(filename=''):
     """funct"""
     with open(filename, 'r') as file:
         for i in file:
-            print(i)
+            print(i, end='')
