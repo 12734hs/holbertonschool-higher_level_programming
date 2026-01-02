@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""PART:I/O""" 
+"""PART:I/O"""
 
 
 def read_file(filename=''):
