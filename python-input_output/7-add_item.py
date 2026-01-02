@@ -10,5 +10,6 @@ if __name__ == "__main__":
         lst = load("add_file.json")
         save(sys.argv[1:], lst)
     except FileNotFoundError:
-        lst = []
-        save(sys.argv[1:], lst)
+        items = []
+        items.extend(sys.argv[1:])
+        save(items, lst)
