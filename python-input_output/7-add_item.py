@@ -8,8 +8,7 @@ save = __import__('5-save_to_json_file').save_to_json_file
 if __name__ == "__main__":
     try:
         lst = load("add_file.json")
-        save(sys.argv[1:], lst)
     except FileNotFoundError:
-        items = []
-        items.extend(sys.argv[1:])
-        save(items, lst)
+        lst = []
+    items.extend(sys.argv[1:])
+    save(items, lst)
