@@ -5,4 +5,4 @@
 def read_file(filename=''):
     """funct"""
     with open(filename, 'r') as file:
-        file.read()
+        return file.read()
