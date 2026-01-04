@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """LOL"""
 
+
 def pascal_triangle(n):
     """fucntion"""
 
