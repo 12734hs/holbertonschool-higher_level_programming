@@ -24,7 +24,7 @@ def status():
 def return_info(username):
     user = users.get(username)
     if user:
-        return jsonify(users[user])
+        return jsonify(user)
     else:
         return jsonify({'error': "User not found"}), 404
 
