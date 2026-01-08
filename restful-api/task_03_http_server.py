@@ -26,7 +26,11 @@ class Handler(sub):
             self.end_headers()
             self.wfile.write(b'OK')
         else:
-            self.send_error(404, 'Endpoint not found')
+            self.send_response(404)
+            self.send_header("Content-type", "application/json")
+            self.end_headers()
+            self.wfile.write(json.dumps({"error": "Endpoint not found"}).encode())
+
 
 PORT = 8000
 server = socketserver.TCPServer(('', PORT), Handler)
