@@ -8,7 +8,7 @@ src = 'https://jsonplaceholder.typicode.com/posts'
 def fetch_and_print_posts(link=src):
     response = requests.get(link)
     if response:
-        print('Status Code: '.format(response.status_code))
+        print('Status Code: {}'.format(response.status_code))
         json_version = response.json()
         for i in range(0, len(json_version)):
             print(json_version[i]['title'])
