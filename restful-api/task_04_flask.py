@@ -33,15 +33,15 @@ def add_user():
 
     data_dct = request.get_json()
 
-    if data_dct is None:
+    if not data_dct:
         return jsonify({'error': 'Invalid JSON'}), 400
 
     username = data_dct.get('username')
 
-    if 'username' not in data_dct.keys():
+    if not username:
         return jsonify({'error': 'Username is required'}), 400
 
-    if username in users.keys():
+    if username in users:
         return jsonify({'error': 'Username already exists'}), 409
 
     users[username] = data_dct
