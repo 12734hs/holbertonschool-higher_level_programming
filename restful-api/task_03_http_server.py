@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 import http.server
 import socketserver
 import json
@@ -28,3 +27,7 @@ class Handler(sub):
             self.wfile.write(b'OK')
         else:
             self.send_error(404, 'Endpoint not found')
+
+PORT = 8000
+server = socketserver.TCPServer(('', PORT), Handler)
+server.serve_forever()
