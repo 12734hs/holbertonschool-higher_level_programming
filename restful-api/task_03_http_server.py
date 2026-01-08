@@ -29,7 +29,7 @@ class Handler(sub):
             self.send_response(404)
             self.send_header("Content-type", "application/json")
             self.end_headers()
-            self.wfile.write(json.dumps({"error": "Endpoint not found"}).encode())
+            self.wfile.write('Endpoint not found')
 
 
 PORT = 8000
