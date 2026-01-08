@@ -5,7 +5,7 @@ import csv
 src = 'https://jsonplaceholder.typicode.com/posts'
 
 
-def fetch_and_print_posts(link):
+def fetch_and_print_posts(link=src):
     response = requests.get(link)
     if response:
         print('Status Code: '.format(response.status_code))
@@ -13,7 +13,7 @@ def fetch_and_print_posts(link):
         for i in range(0, len(json_version)):
             print(json_version['title'])
 
-def fetch_and_save_posts(link):
+def fetch_and_save_posts(link=src):
     list_of_dictionary_to_csv = []
     response = requests.get(link)
     if response:
