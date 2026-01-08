@@ -27,20 +27,20 @@ def return_info(username):
 @app.route('/add_user', methods=['POST'])
 def add_user():
     json_file = request.get_json()
+    username = json_file.get('username')
 
     if json_file is None:
         return jsonify({'error': 'Invalid JSON'}), 400
 
-    if 'username' not in json_file:
+    if not username:
         return jsonify({'error': "Username is required"}), 400
 
     if json_file['username'] in users:
         return jsonify({'error': "Username already exists"}), 409
 
-    users[json_file['username']] = json_file
+    users[username] = json_file
 
     return jsonify({"message": "user added", 'user': json_file})
-
 
 
 if __name__ == "__main__":
