@@ -11,7 +11,7 @@ def fetch_and_print_posts(link=src):
         print('Status Code: '.format(response.status_code))
         json_version = response.json()
         for i in range(0, len(json_version)):
-            print(json_version['title'])
+            print(json_version[i]['title'])
 
 def fetch_and_save_posts(link=src):
     list_of_dictionary_to_csv = []
