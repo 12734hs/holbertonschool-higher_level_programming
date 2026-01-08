@@ -42,7 +42,8 @@ def add_user():
     if data_dct['username'] in users.keys():
         return jsonify({'error': 'Username already exists'}), 409
 
-    users[data_dct['username']] = {'name': data_dct['name'], 'age': data_dct['age'], 'city': data_dct['city']}
+#    users[data_dct['username']] = {'name': data_dct['name'], 'age': data_dct['age'], 'city': data_dct['city']}
+    users[data_dct['username']] = data_dct
     message = {'message': 'user added', 'user': data_dct}
 
     return jsonify(message), 201
