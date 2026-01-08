@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from flask import Flask, jsonify, abort, request
+from flask import Flask, jsonify, request
 
 users = {}
 not_found_user = {'error': "User not found", "status_code": 404}
@@ -9,37 +9,39 @@ app = Flask(__name__)
 def home():
     return "Welcome to the Flask API!"
 
-@app.route("/data")
-def data_return():
-    return jsonify(users)
+@app.route('/data')
+def data():
+    return jsonify(list(users.keys()))
 
 @app.route('/status')
 def status():
-    return 'OK'
+    return "OK"
 
 @app.route('/users/<username>')
-def return_user(username):
-    if username in users:
-        return users[username]
+def return_info(username):
+    if username in users.keys():
+        return jsonify(users[username])
     else:
-        return jsonify(not_found_user)
+        return jsonify({'error': "User not found"}), 404
 
-@app.route('/add_user', methods=["POST", "GET"])
+@app.route('/add_user', methods=['POST'])
 def add_user():
-    file = request.get_json()
+    json_file = request.get_json()
 
-    if file is None:
-        return jsonify({'error': "Invalid JSON"}), 400
+    if json_file is None:
+        return jsonify({'error': 'Invalid JSON'}), 400
 
-    if 'username' not in file:
+    if 'username' not in json_file:
         return jsonify({'error': "Username is required"}), 400
 
-    if file['username'] in users:
-        return jsonify({'error': "Username is already exists"}), 409
+    if json_file['username'] in users:
+        return jsonify({'error': "Username already exists"}), 409
 
-    users[file['username']] = {"name": file['name'], "age": file['age'], "city": file['city']}
+    users[json_file['username']] = json_file
 
-    return jsonify({'message': 'user added', 'user': {'username': file["username"], 'name': file['name'], "age": file["age"], 'city': file['city']}})
+    return jsonify({"message": "user added", 'user': json_file})
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
