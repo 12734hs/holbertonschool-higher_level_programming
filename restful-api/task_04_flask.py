@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 from flask import Flask, jsonify, abort, request
 
-users = {'admin': {"name": "admin", "age": "immortal", "city": "earth"}}
+users = {}}
 not_found_user = {'error': "User not found", "status_code": 404}
 app = Flask(__name__)
 
