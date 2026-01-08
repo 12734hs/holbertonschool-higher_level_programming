@@ -36,10 +36,10 @@ def add_user():
     if data_dct is None:
         return jsonify({'error': 'Invalid JSON'}), 400
 
-    if 'username' not in data_dct.keys():
+    if 'username' not in users.keys():
         return jsonify({'error': 'Username is required'}), 400
 
-    if data_dct['username'] in data_dct.keys():
+    if data_dct['username'] in users.keys():
         return jsonify({'error': 'Username already exists'}), 409
 
     users[data_dct['username']] = {'name': data_dct['name'], 'age': data_dct['age'], 'city': data_dct['city']}
