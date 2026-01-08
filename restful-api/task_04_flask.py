@@ -46,7 +46,7 @@ def add_user():
         return jsonify({'error': 'Username already exists'}), 409
 
     users[username] = data_dct
-    message = {'message': 'user added', 'user': data_dct}
+    message = {'message': 'User added', 'user': data_dct}
 
     return jsonify(message), 201
 
