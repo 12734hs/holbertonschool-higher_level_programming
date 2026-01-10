@@ -85,7 +85,7 @@ def protected():
 @jwt_required()
 def check_admin():
     data = get_jwt()
-    if data.get('role') != 'admin':
+    if data['sub'].get('role') != 'admin':
         return jsonify({'error': 'Admin access required'}), 403
 
     return 'Admin Access: Granted'
