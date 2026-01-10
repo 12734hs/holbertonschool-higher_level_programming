@@ -1,3 +1,4 @@
+import os
 from flask import Flask, request, jsonify
 from flask_httpauth import HTTPBasicAuth
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -6,7 +7,8 @@ from flask_jwt_extended import create_access_token, jwt_required, JWTManager, ge
 
 app = Flask(__name__)
 
-app.config['JWT_SECRET_KEY'] = 'fYLv51a4aDURpIkGdBqUCBBv6rk'
+app.config["JWT_SECRET_KEY"] = os.environ.get("JWT_SECRET_KEY", "super-secret-key")
+#app.config['JWT_SECRET_KEY'] = 'fYLv51a4aDURpIkGdBqUCBBv6rk'
 jwt = JWTManager(app)
 auth = HTTPBasicAuth()
 
