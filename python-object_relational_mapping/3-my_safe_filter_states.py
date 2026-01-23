@@ -19,7 +19,6 @@ def connection():
 
     cursor = db.cursor()
 
-
     sql = ("SELECT * FROM states "
            "WHERE name=%s ORDER BY "
            "states.id ASC;".format(str(stn)))
