@@ -3,18 +3,19 @@
 import MySQLdb
 import sys
 
+
 def connection():
     usrnm = sys.argv[1]
     psswrd = sys.argv[2]
     db_name = sys.argv[3]
 
     db = MySQLdb.connect(
-         host = 'localhost',
-         port = 3306,
-         user = usrnm,
-         password = psswrd,
-         database = db_name)
-    
+         host='localhost',
+         port=3306,
+         user=usrnm,
+         password=psswrd,
+         database=db_name)
+
     cursor = db.cursor()
 
     sql = "SELECT * FROM states ORDER BY states.id ASC;"
@@ -26,6 +27,7 @@ def connection():
 
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     connection()
