@@ -31,7 +31,7 @@ def connection():
 
     for i in rows:
         if rows[-1] == i:
-            print('{}, '.format(i[0]))
+            print('{}'.format(i[0]))
         else:
             print('{}, '.format(i[0]),end='')
 
