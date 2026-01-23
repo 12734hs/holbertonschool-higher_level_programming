@@ -18,7 +18,11 @@ def connection():
 
     cursor = db.cursor()
 
-    sql = "SELECT * FROM states WHERE BINARY name LIKE 'N%' ORDER BY states.id ASC;"
+    sql = (
+    "SELECT * FROM states "
+    "WHERE BINARY name LIKE 'N%' "
+    "ORDER BY states.id ASC;")
+
     cursor.execute(sql)
 
     rows = cursor.fetchall()
