@@ -20,7 +20,7 @@ def connection():
     cursor = db.cursor()
 
     sql = ("SELECT * FROM states "
-           "WHERE name='{}' ORDER BY "
+           "WHERE BINARY name='{}' ORDER BY "
            "states.id ASC;".format(str(stn)))
 
     cursor.execute(sql)
