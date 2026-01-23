@@ -28,8 +28,8 @@ def connection():
     cursor.execute(sql, (state_name, ))
 
     rows = cursor.fetchall()
-    for row in rows:
-        print(row)
+    for i in rows:
+        print('{}, '.format(i[0]))
 
     cursor.close()
     db.close()
