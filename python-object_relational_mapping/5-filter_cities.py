@@ -20,10 +20,10 @@ def connection():
     cursor = db.cursor()
 
     sql = ("SELECT cities.name "
-    "FROM cities "
-    "JOIN states ON cities.state_id = states.id "
-    "WHERE states.name = %s "
-    "ORDER BY cities.id ASC;")
+           "FROM cities "
+           "JOIN states ON cities.state_id = states.id "
+           "WHERE states.name = %s "
+           "ORDER BY cities.id ASC;")
 
     cursor.execute(sql, (state_name, ))
 
@@ -34,7 +34,6 @@ def connection():
         cities.append(row[0])
 
     print(", ".join(cities))
-    
 
     cursor.close()
     db.close()
