@@ -29,13 +29,12 @@ def connection():
 
     rows = cursor.fetchall()
 
-    for i in rows:
-        if rows[-1] == i:
-            print('{}, '.format(i[0]))
-        elif rows is None:
-            pass
-        else:
-            print('{}, '.format(i[0]),end='')
+    cities = []
+    for row in rows:
+        cities.append(row[0])
+
+    print(", ".join(cities))
+    
 
     cursor.close()
     db.close()
