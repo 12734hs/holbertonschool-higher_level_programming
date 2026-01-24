@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""HIIIIIIIIIIIIII"""
 from sqlalchemy import column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 
