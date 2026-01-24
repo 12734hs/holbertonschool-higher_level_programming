@@ -1,7 +1,7 @@
 #!/usr/bin/python3
+"""YESSSSSSSSSSSSSSSSSSSSSSS"""
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-"""YESSSSSSSSSSSSSSSSSSSSSSS"""
 
 Base = declarative_base()
 
