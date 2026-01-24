@@ -1,19 +1,24 @@
 #!/usr/bin/python3
-"""BArcelona Visca"""
+"""
+Lists all State objects from the database hbtn_0e_6_usa
+"""
 import sys
 from model_state import Base, State
-from sqlalchemy import (create_engine)
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
+
 if __name__ == "__main__":
-  """16-7"""
-  engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
+    # движок
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
+        sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
 
-  Session = sessionmaker(bind=engine)
-  session = Session()
+    Session = sessionmaker(bind=engine)
+    session = Session()
 
-  states = session.query(State).order_by(State.id).all()
-  for i in states:
-    print("{}: {}".format(i.id, i.name))
+    states = session.query(State).order_by(State.id).all()
 
-  session.close()
+    for state in states:
+        print("{}: {}".format(state.id, state.name))
+
+    session.close()
