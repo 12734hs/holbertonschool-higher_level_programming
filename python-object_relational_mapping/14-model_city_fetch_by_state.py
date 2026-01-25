@@ -8,6 +8,7 @@ from model_state import Base, State
 from sqlalchemy import create_engine, delete
 from sqlalchemy.orm import sessionmaker
 
+
 if __name__ == "__main__":
     # движок
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
