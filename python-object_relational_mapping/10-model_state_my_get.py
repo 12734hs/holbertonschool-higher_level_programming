@@ -20,9 +20,11 @@ if __name__ == "__main__":
 
     state = (session.query(State).
              filter(State.name == state_which_was_given).
-             order_by(State.id).all())
+             order_by(State.id).first())
 
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
+    if state:
+        print("{}".format(state.id))
+    else:
+        print('Not found')
 
     session.close()
