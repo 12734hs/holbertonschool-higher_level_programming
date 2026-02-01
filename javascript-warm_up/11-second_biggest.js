@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const massiv = process.argv.slice(2);
-if (massiv === undefined) {
+if (massiv.length < 2) {
   console.log(1);
   process.exit(0);
 }
