@@ -1,8 +1,9 @@
 #!/usr/bin/node
 
 const massivOfArguments = process.argv;
+const value = Number(massivOfArguments[2]);
 
-if (Number(massivOfArguments[2] === 'NaN' || massivOfArguments[2] === undefined) {
+if (Number.isNaN(value)){
   console.log('Not a number');
 } else {
   console.log(`My number: ${massivOfArguments[2]}`)
