@@ -2,8 +2,7 @@
 
 const massivOfArguments = process.argv;
 
-try {
-  console.log(massivOfArguments[2]);
-} catch (e) {
+if (massivOfArguments[2] === undefined) {
   console.log('No argument');
 }
+console.log(massivOfArguments[2]);
