@@ -1,8 +1,11 @@
 def generate_invitations(template, attendees):
-    if not isinstance(template, str) \
-    or not isinstance(attendees, list) \
-    or not all(isinstance(i, dict) for i in attendees):
-        raise ValueError("Invalid input types")
+    if not isinstance(template, str):
+        print("Error: Template must be a string.")
+        return 0
+
+    if not isinstance(attendees, list) or not all(isinstance(a, dict) for a in attendees):
+        print("Error: Attendees must be a list of dictionaries.")
+        return 0
 
     if not template:
         print("Template is empty, no output files generated.")
