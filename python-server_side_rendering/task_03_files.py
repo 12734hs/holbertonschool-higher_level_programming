@@ -44,17 +44,16 @@ def products():
             return render_template('product_display.html', information=data)
 
     if source == 'json':
-        data = parsers.parse_json('products.json')
-        items = data.get('items', [])  # берём список продуктов
+        data = parsers.parse_json('products.json')  # это уже список
         data_with_id = None
         if id:
-            for i in items:
+            for i in data:
                 if str(i['id']) == str(id):
                     data_with_id = i
                     break
             return render_template('product_display.html', information=data_with_id)
         else:
-            return render_template('product_display.html', information=items)
+            return render_template('product_display.html', information=data)
 
 
 if __name__ == "__main__":
