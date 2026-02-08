@@ -1,59 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Product Display</title>
+    <title>Products</title>
 </head>
 <body>
 
-    {% include "header.html" %}
+<h1>Product List</h1>
 
-    <h1>Display the content</h1>
+{% if error %}
+    <p style="color: red;"><strong>{{ error }}</strong></p>
+{% elif products %}
+    <table border="1" cellpadding="5">
+        <tr>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+        </tr>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.category }}</td>
+            <td>${{ "%.2f"|format(product.price) }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% else %}
+    <p>No products available</p>
+{% endif %}
 
-    {% if information is string %}
-        <p class="error">{{ information }}</p>
-    {% elif information is iterable %}
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Category</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody>
-            {% for item in information %}
-                <tr>
-                    <td>{{ item.id }}</td>
-                    <td>{{ item.name }}</td>
-                    <td>{{ item.category }}</td>
-                    <td>{{ item.price }}</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
-    {% else %}
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Category</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>{{ information.id }}</td>
-                    <td>{{ information.name }}</td>
-                    <td>{{ information.category }}</td>
-                    <td>{{ information.price }}</td>
-                </tr>
-            </tbody>
-        </table>
-    {% endif %}
-
-    {% include "footer.html" %}
 </body>
 </html>
