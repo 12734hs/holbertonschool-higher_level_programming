@@ -1,5 +1,5 @@
 import json, csv
-import db
+import create_db
 
 def read_json_products():
     with open("products.json", "r") as f:
@@ -20,7 +20,7 @@ def read_csv_products():
 
 def read_database():
     list_of_tables = ['id', 'name', 'category', 'price']
-    data = db.show()
+    data = create_db.show()
     products = []
 
     for tup in data:
@@ -30,5 +30,3 @@ def read_database():
         products.append(product_sample)
 
     return products
-
-read_database()
