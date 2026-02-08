@@ -25,5 +25,5 @@ def generate_invitations(template, attendees):
             value = "N/A" if value is None else str(value)
             result = result.replace(f"{{{key}}}", value)
 
-        with open(f"output_{i+1}.txt", "w") as f:
+        with open(f"output_{i}.txt", "w") as f:
             f.write(result)
