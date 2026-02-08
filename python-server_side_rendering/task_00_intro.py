@@ -1,27 +1,29 @@
 def generate_invitations(template, attendees):
     if not isinstance(template, str):
         print("Error: Template must be a string.")
-        return 0
+        return
 
     if not isinstance(attendees, list) or not all(isinstance(a, dict) for a in attendees):
         print("Error: Attendees must be a list of dictionaries.")
-        return 0
+        return
 
     if not template:
         print("Template is empty, no output files generated.")
-        return None
+        return
 
-    if len(attendees) == 0:
+    if not attendees:
         print("No data provided, no output files generated.")
-        return None
+        return
 
-    for index, dct in enumerate(attendees):
+    placeholders = ["name", "event_title", "event_date", "event_location"]
+
+    for i, attendee in enumerate(attendees, start=1):
         result = template
-        for k in dct.keys():
-            value = 'N/A' if dct[k] is None else dct[k]
-            result = result.replace(f"{{{k}}}", value)
 
-        with open(f'output_{index+1}.txt', 'w') as file:
-            file.write(result)
+        for key in placeholders:
+            value = attendee.get(key)
+            value = "N/A" if value is None else str(value)
+            result = result.replace(f"{{{key}}}", value)
 
-    return 1
+        with open(f"output_{i+1}.txt", "w") as f:
+            f.write(result)
