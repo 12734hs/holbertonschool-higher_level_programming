@@ -8,7 +8,7 @@ def products():
     source = request.args.get("source")
     product_id = request.args.get("id")
 
-    if source not in ("json", "csv"):
+    if source not in ("json", "csv", "sql"):
         return render_template(
             "product_display.html",
             error="Wrong source",
@@ -22,7 +22,6 @@ def products():
             products = read_csv_products()
         else:
             products = read_database()
-
     except Exception:
         return render_template(
             "product_display.html",

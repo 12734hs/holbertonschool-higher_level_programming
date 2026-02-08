@@ -4,8 +4,6 @@ def create_database():
     conn = sqlite3.connect('products.db')
     cursor = conn.cursor()
 
-    cursor.execute('DROP TABLE IF EXISTS Products')
-
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS Products (
             id INTEGER PRIMARY KEY,
@@ -40,5 +38,3 @@ def show():
 
 if __name__ == '__main__':
     create_database()
-    l = show()
-    print(l)
