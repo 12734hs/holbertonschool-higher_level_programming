@@ -3,6 +3,9 @@ import sqlite3
 def create_database():
     conn = sqlite3.connect('products.db')
     cursor = conn.cursor()
+
+    cursor.execute('DROP TABLE IF EXISTS Products')
+
     cursor.execute('''
         CREATE TABLE IF NOT EXISTS Products (
             id INTEGER PRIMARY KEY,
@@ -17,9 +20,25 @@ def create_database():
         (1, 'Laptop', 'Electronics', 799.99),
         (2, 'Coffee Mug', 'Home Goods', 15.99)
     ''')
+
+    cursor.execute("""
+        SELECT * FROM Products
+    """)
+
+    data = cursor.fetchall()
     conn.commit()
     conn.close()
 
+    return data
+
+def show():
+    conn = sqlite3.connect('products.db')
+    cursor = conn.cursor()
+    data = cursor.execute("""SELECT * FROM Products""")
+    data = data.fetchall()
+    return data
 
 if __name__ == '__main__':
     create_database()
+    l = show()
+    print(l)

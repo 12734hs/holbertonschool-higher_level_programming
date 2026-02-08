@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from parsers import read_csv_products, read_json_products
+from parsers import read_csv_products, read_json_products, read_database
 
 app = Flask(__name__)
 
@@ -18,8 +18,11 @@ def products():
     try:
         if source == "json":
             products = read_json_products()
-        else:
+        elif source == 'csv':
             products = read_csv_products()
+        else:
+            products = read_database()
+
     except Exception:
         return render_template(
             "product_display.html",
